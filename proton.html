@@ -31,7 +31,16 @@
 	<script>
 	$(function () {
 		// 6 create an instance when the DOM is ready
-		$('#jstree').jstree();
+		//$('#jstree').jstree();
+		$('#jstree').jstree({
+			'core': {
+					'themes': {
+							'name': 'proton',
+							//'responsive': true
+					}
+			}
+		});
+		
 		// 7 bind to events triggered on the tree
 		$('#jstree').on("changed.jstree", function (e, data) {
 			console.log(data.selected);
