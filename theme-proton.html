@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - jsTree demo w/Bootstrap theme</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link rel="stylesheet" href="http://www.orangehilldev.com/jstree-bootstrap-theme/demo/assets/dist/themes/proton/style.css" />
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.0.9/themes/default/style.min.css" />
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.0.9/jstree.min.js"></script>
+
+
+
+<div id="container">
+  <ul>
+    <li>Root node
+      <ul>
+        <li>Child node 1</li>
+        <li>Child node 2</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<script>
+$(function() {
+  $('#container').jstree({
+    'core': {
+        'themes': {
+            'name': 'proton',
+            'responsive': true
+        }
+    },
+    "plugins": [ "contextmenu" ]
+  });
+});
+</script>
+<!-- partial -->
+  
+</body>
+</html>
