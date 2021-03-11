@@ -4,9 +4,7 @@
 	<meta charset="utf-8">
 	<title>jsTree test</title>
 	<!-- 2 load the theme CSS file -->
-	<!--link rel="stylesheet" href="js/jstree/themes/default/style.min.css" /-->
-	<!--link rel="stylesheet" href="js/jstree/themes/default-dark/style.min.css" /-->
-	<link rel="stylesheet" href="js/jstree/themes/proton/style.min.css" />
+	<link rel="stylesheet" href="js/jstree/themes/default-dark/style.min.css" />
 </head>
 <body>
 	<!-- 3 setup a container element -->
@@ -33,7 +31,17 @@
 	<script>
 	$(function () {
 		// 6 create an instance when the DOM is ready
-		$('#jstree').jstree();
+		//$('#jstree').jstree();
+		$('#jstree').jstree({
+			'core': {
+					'themes': {
+							'name': 'default-dark',
+							'responsive': true
+					}
+			},
+			"plugins": [ "contextmenu" ]
+		});
+		
 		// 7 bind to events triggered on the tree
 		$('#jstree').on("changed.jstree", function (e, data) {
 			console.log(data.selected);
