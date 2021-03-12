@@ -11,17 +11,29 @@
 	<div id="jstree">
 		<!-- in this example the tree is populated from inline HTML -->
 		<ul>
-			<li>Root node 1
+			<li class="jstree-open">Root node 1
 				<ul>
-					<li id="child_node_1">Child node 1</li>
-					<li>Child node 2</li>
-					<li data-jstree='{"disabled":true}'>Child</li>
-					<li data-jstree='{"icon":"//jstree.com/tree.png"}'>Child</li>
-					<li data-jstree='{"icon":"images/tree_icon.png"}'>Child</li>
-					<li data-jstree='{"icon":"glyphicon glyphicon-leaf"}'>Child</li>
+					<li data-jstree='{"icon":"images/alert.png"}'>Alert</li>
+					<li data-jstree='{"icon":"images/warning.png"}'>Warning</li>
+					<li data-jstree='{"icon":"images/checkmark.png"}'>Checkmark</li>
+					<li data-jstree='{"icon":"images/top.png"}'> Top</li>
+					<li data-jstree='{"icon":"images/bottom.png"}'> Bottom</li>
+					<li data-jstree='{"icon":"images/front.png"}'> Front</li>
+					<li data-jstree='{"icon":"images/back.png"}'> Back</li>
+					<li data-jstree='{"icon":"images/left.png"}'> Left</li>
+					<li data-jstree='{"icon":"images/right.png"}'> Right</li>
 				</ul>
 			</li>
 			<li>Root node 2</li>
+			<li id="child_node_1">Child node 1
+				<ul>
+					<li>Child node 2</li>
+					<li data-jstree='{"disabled":true}'>Child</li>
+					<li data-jstree='{"icon":"//jstree.com/tree.png"}'>tree</li>
+					<li data-jstree='{"icon":"images/tree_icon.png"}'>tree</li>
+					<li data-jstree='{"icon":"glyphicon glyphicon-leaf"}'>Child</li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 	<br/>
@@ -39,9 +51,10 @@
 			'core': {
 					'themes': {
 							'name': 'proton',
-							//'responsive': true
+							'responsive': true
 					}
-			}
+			},
+			"plugins" : [ "wholerow" ]
 		});
 		
 		// 7 bind to events triggered on the tree
